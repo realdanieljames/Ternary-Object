@@ -1,15 +1,15 @@
 //1.
-const person = [{ name: "Jill" }, { name: "" }, { name: "Bob" }];
-//create a function 'greeting' that maps through the array.
-// Use a ternary.
-// If there is a name it should say 'Hello <name>' otherwise it should say,
-// 'Hello Stranger'.
+// const person = [{ name: "Jill" }, { name: "" }, { name: "Bob" }];
+// //create a function 'greeting' that maps through the array.
+// // Use a ternary.
+// // If there is a name it should say 'Hello <name>' otherwise it should say,
+// // 'Hello Stranger'.
 
-const greeting = person.map((value) => {
-  return value.name ? `Hello ${value.name}` : `Hello Stranger`
-})
+// const greeting = person.map((value) => {
+//   return value.name ? `Hello ${value.name}` : `Hello Stranger`
+// })
 
-console.log(greeting)
+// console.log(greeting)
 
 //=============================================================================//
 //=============================================================================//
@@ -19,14 +19,14 @@ console.log(greeting)
 ///Create a function that uses ternary to decide whether the person can drive
 // If they are below 15 then log 'cannot drive', if they are 15 then log 'can drive with a parent', if they are 16 or above then 'yes they can drive'
 
-const allowedToDrive = (age) => {
-  return age === 15
-    ? `can drive with Parent` :
-    age < 15
-      ? `cannot drive` : `yes they can drive`
-}
+// const allowedToDrive = (age) => {
+//   return age === 15
+//     ? `can drive with Parent` :
+//     age < 15
+//       ? `cannot drive` : `yes they can drive`
+// }
 
-console.log(allowedToDrive(15))
+// console.log(allowedToDrive(6))
 
 //=============================================================================//
 //=============================================================================//
@@ -42,24 +42,43 @@ console.log(allowedToDrive(15))
 //  `<speed> is a decent speed`
 // ---
 
-// node 
-let speed = 66
-const allowableSpeed = `${speed} is a decent speed`
+// // // node 
+// let speed = 66
+// const allowableSpeed = `${speed} is a decent speed`
 
-let speedMessage =
-  (speed === 70)
-    ? `70 is the perfect speed` :
-    (speed >= 90)
-      ? `Are you trying to get us killed` :
-      (speed < 50)
-        ? `Faster please` :
-        (speed < 10)
-          ? `you should not drive` : allowableSpeed
+// let speedMessage =
+//   speed = [70, 90, 50, 10]
+//   const [perfectSpeed, killUsSpeed, fasterSpeedPlease, dontDrive] = speed
+//   speed === 70
+//     ? `70 is the perfect speed` : ''
+//       (speed >= 90)
+//       ? `Are you trying to get us killed` : ''
+//         (speed < 50)
+//         ? `Faster please` : ''
+//           (speed < 10)
+//           ? `you should not drive` : allowableSpeed
 
 
 
-console.log(speedMessage)
 
+// console.log(speedMessage)
+
+
+
+// let speedMessage = function (){
+
+//   return speed === 70 
+//   ? `70 is the perfect speed`
+//   : speed >= 90
+//   ? `are you trying to get us killed?`
+//   :   50 > speed > 10
+//   ? `faster please`
+//   : speed < 10
+//   ?`you should not drive`
+//   : `${speed } is a decent enough speed`;
+// }
+
+// console.log(speedMessage(75))
 
 
 
@@ -77,50 +96,55 @@ console.log(speedMessage)
  *                 //[ 445, 4555 ][ 22, 33.99, 1, 44.98 ] [ 'PEACHES', 'APPLE' ]                  *
  *                                                                                    *
  **************************************************************************************************/
-let arr = ['peaches',
-  444.7,
-  22,
-  undefined,
-  33.99999,
-  null,
-  1,
-  'apple',
-  4555,
-  undefined,
-  NaN,
-  44.98999,
-]
+// let arr = ['peaches',
+//   444.7,
+//   22,
+//   undefined,
+//   33.99999,
+//   null,
+//   1,
+//   'apple',
+//   4555,
+//   undefined,
+//   NaN,
+//   44.98999,
+// ]
 
-let arr1 = []
-let arr2 = []
-let arr3 = []
-
-
+// let arr1 = []
+// let arr2 = []
+// let arr3 = []
 
 
 
-    typeof (value) === 'number' && value > 50
-      //  value = value.toFixed(2)
-    ?arr1.push(value):
+// arr.forEach((item) => {
+//   if (item === undefined || item === null || item === '') return;
+//   if (typeof item === 'string') return arr3.push(item);
+
+//   if(!isNaN(item)){
+
+    
+//     let n = item.toString();
+//     let trunc = +(n.slice(0, n.indexOf('.')) + n.slice(n.indexOf('.'), 5));
+//     let dotCheck = n.includes('.');
+    
+//     dotCheck && item > 50 
+//     ? arr1.push(trunc) 
+//     : item > 50 
+//     ? arr1.push(item)
+//     :dotCheck && item < 50
+//     arr2.push(trunc)
+//     arr2.push(item)
+//   }
+// })
+
+
+// console.log(arr1)
+// console.log(arr2)
+// console.log(arr3)
 
 
 
-  (typeof (value) === 'number' && value < 50)
-    // ? value = value.toFixed(2)
-    ?arr3.push(value):''
 
-
-console.log(arr1)
-console.log(arr2)
-console.log(arr3)
-
-
-
-
-
-
-let num = 44.8;
-console.log(typeof (num))
 //=============================================================================//
 //=============================================================================//
 
@@ -145,8 +169,8 @@ const cokeValues = allPrices[1].map(values => values * 2)
 
 let priceDoubler = Object.create(prices)
 priceDoubler.cigarettes = allPrices[0] * 2
-priceDoubler.coke = {lg:cokeValues[0], sm:cokeValues[1]}
-priceDoubler.chips = allPrices[2] *2
+priceDoubler.coke = { lg: cokeValues[0], sm: cokeValues[1] }
+priceDoubler.chips = allPrices[2] * 2
 
 
 console.log(priceDoubler)
@@ -155,3 +179,19 @@ console.log(priceDoubler)
 
 
 
+// let priceDoubler = {}
+
+// Object.entries(prices).forEach( ([keyOneLevel, valueOneLevel])  => {
+//   if(typeof valueOneLevel === 'number'){
+//     priceDoubler[keyOneLevel] = valueOneLevel * 2
+
+//   }
+//   else if(typeof valueOneLevel === 'object'){{
+//     priceDoubler[keyOneLevel] = {}
+//     Object.entries(valueOneLevel).forEach(([keySecondLevel, valueSecondLevel]) =>{
+//       priceDoubler[keyOneLevel][keySecondLevel ]= 
+//       valueSecondLevel * 2;
+//     })
+//   }}
+// })
+// console.log(priceDoubler)
